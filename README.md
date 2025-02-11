@@ -16,9 +16,23 @@ Before you begin, ensure you have the following installed:
 
 ## Setup
 
-Follow these steps to set up the project on your local machine.
+### Quick Setup
+Replace `your_openai_api_key_here`, `your_merge_api_key_here`, and `your_merge_account_token_here` with your OpenAI API key, Merge API key, and Merge account token, respectively, and run the following commands:
+```bash
+git clone https://github.com/dalmergeo/llm-demo.git
+cd llm-demo
+deactivate # deactivate any existing virtual environment
+python -m venv .venv # create a virtual environment
+source .venv/bin/activate # activate the virtual environment
+pip install -r requirements.txt # install the dependencies
+echo "OPENAI_API_KEY=your_openai_api_key_here" > .env
+echo "MERGE_API_KEY=your_merge_api_key_here" >> .env
+echo "MERGE_ACCOUNT_TOKEN=your_merge_account_token_here" >> .env
+```
 
-### 1. Clone the Repository
+### Detailed Setup
+
+#### 1. Clone the Repository
 
 Clone the repository to your local machine:
 
@@ -27,7 +41,7 @@ git clone https://github.com/dalmergeo/llm-demo.git
 cd llm-demo
 ```
 
-### 2. Create a Virtual Environment
+#### 2. Create a Virtual Environment
 
 Create a virtual environment in a directory named `.venv`:
 
@@ -37,7 +51,7 @@ python -m venv .venv
 
 (NOTE: If you are using a different version of Python, replace `python` with `python3`.)
 
-### 3. Activate the Virtual Environment
+#### 3. Activate the Virtual Environment
 
 Activate the virtual environment:
 
@@ -45,7 +59,7 @@ Activate the virtual environment:
 source .venv/bin/activate
 ```
 
-### 4. Install the Dependencies
+#### 4. Install the Dependencies
 
 Install the project dependencies:
 
@@ -53,7 +67,7 @@ Install the project dependencies:
 pip install -r requirements.txt
 ```
 
-### 5. Set up `.env` File
+#### 5. Set up `.env` File
 
 Create a `.env` file in the project root directory and add the following environment variables:
 
